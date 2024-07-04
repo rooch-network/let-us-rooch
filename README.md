@@ -60,6 +60,8 @@ Rooch 开发者训练营正式开启报名，具体课程为期 6 周，第一�
 
 **六、黑客松**
 
+**七、结业仪式**
+
 ### Bounty
 
 - 每上完一堂课 完成作业 记录 50 分
@@ -75,7 +77,3 @@ Rooch 开发者训练营正式开启报名，具体课程为期 6 周，第一�
 1. 填写 Rooch 开发者训练营报名表单，加入 Rooch 星航计划微信群组，即为报名成功。
 2. Fork 本仓库，**复制** [members/githubid](./members/githubid) 目录名为 `members/$your_github_id`，根据自己的信息编辑其中的 `readme.md` 内容，并提交 **Pull Request** 给本仓库，持续跟踪学习进度。
 3. 学习过程中可以持续更新该文件的学习日志，以及学习成果。如果学习过程中问题，可以在群里讨论。如果需要一些练习任务，但又找不到合适的，可以咨询导师。
-
-## 群组与媒体
-
-**[Website](https://rooch.network/) | [Discord](https://discord.com/invite/rooch) | [Twitter]() | [Telegram](https://t.me/roochnetwork) | [Github](https://github.com/rooch-network/)**
