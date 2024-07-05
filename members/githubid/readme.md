@@ -1,15 +1,14 @@
-# 星航计划加入申请表
+# Let's Rooch 训练营加入申请表
 
 ### 个人介绍
 
-* Github ID: [<++>](<++>)
+* Github ID：[jolestar](https://github.com/jolestar)
 
-* Telegram ID: <++>
+* 微信号：wechatNumber
 
-* Discord ID: <++>
+* 邮箱：example@gmail.com
 
-(首次如果没有，学习完毕钱包在填写)
-* Rooch 账号地址：（以 `roochxxx` 开头的地址）
+* BTC 地址：
 
 **删掉这行，开始在这里写一些个人介绍～**
 
@@ -20,15 +19,8 @@
 
 ### 学习成果
 
-Roadmap  1  
-- 项目源码:填写自己的源码地址
-- 发布的ERC20
-package1: xx
-package2: xx
-
+1.
 
 2.
 
-
-3. 
-
+3.
