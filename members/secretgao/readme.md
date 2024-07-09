@@ -2,7 +2,7 @@
 
 ### 个人介绍
 
-* Github ID：[Joe Chen](https://github.com/secretgao)
+* Github ID：[secretgao](https://github.com/secretgao)
 
 * 微信号：hlyyllyylxoxo
 
