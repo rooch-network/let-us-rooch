@@ -19,7 +19,7 @@ cd rooch && cargo build && cp target/debug/rooch ~/.cargo/bin/
 ```
 
 ##### 安装遇到的错误
-* 1 
+* 问题 1 
 ```
 = note: collect2: fatal error: ld terminated with signal 9 [Killed]
 compilation terminated.
@@ -35,7 +35,7 @@ export CARGO_BUILD_JOBS=1
 cargo build
 ```
 
-* 2
+* 问题 2
 ```
 e" "-Wl,-z,relro,-z,now" "-nodefaultlibs"
 = note: collect2: fatal error: ld terminated with signal 9 [Killed]
