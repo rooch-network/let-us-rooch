@@ -31,6 +31,17 @@ Rooch 开发者训练营正式开启报名，具体课程为期 6 周，第一�
 - 腾讯会议 在线直播
 - 录播视频，剪辑上传视频平台后，链接放 [Videos](./videos.md) 页面
 
+### 导师简介
+
+- Jolestar
+  - Rooch 创始人，MoveFunsDAO 发起人，Bitseed & Movescription 协议作者。曾任 WestarLabs 首席架构师，青云容器平台负责人，新浪微博架构师，互联网从业经验 10 多年，2017 年后专注于区块链基础设施领域，致力于 Web3 的广泛采用
+- Haichao
+  - Rooch Network 项目的联合创始人兼 CEO，曾在 Nervos，Solana，Algorand 和 Aptos 等公链项目工作。在此之前，Haichao 曾在微软亚洲研究院，德国 Hasso-Plattner-Institut 和东京大学进行学术研究工作
+- Baichuan
+  - Rooch 核心开发者，区块链技术爱好者，10+ 年开发经验，先后在新浪微博/映客/WestarLabs 做架构设计和技术开发，21 年开始专注在区块链行业，开发公链和建设生态基础设施。
+- Sven
+  - 连续创业者，曾任互联网从业经验 10 多年，2021 年后专注于区块链基础设施领域，致力于 Web3 的广泛采用
+
 ### 课程大纲
 
 **一、Bitcoin 基础知识以及课程介绍**
@@ -60,6 +71,8 @@ Rooch 开发者训练营正式开启报名，具体课程为期 6 周，第一�
 - 时间：2024年8月7日
 
 **六、黑客松**
+
+期待你在 Rooch Network 生根发芽！
 
 ## Bounty
 
