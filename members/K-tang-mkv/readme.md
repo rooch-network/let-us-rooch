@@ -19,7 +19,8 @@ I'm working for myself and interested in Bitcoin and web3, looking forward to fi
 
 ### 学习成果
 
-1.
+1. 运行btc全节点 ![fullnode](./assets/full_node.png)  
+初步认识了rooch的作用。rooch作为btc二层，继承其安全性，同时扩展搞各种生态应用
 
 2.
 
