@@ -50,6 +50,8 @@ Rooch 开发者训练营正式开启报名，具体课程为期 6 周，第一�
 
 - 讲师：Haichao
 - 时间：2024年7月10日
+- 视频：[腾讯会议录制](https://meeting.tencent.com/user-center/shared-record-info?id=8ed2b5d7-53ae-4413-abd8-a1fc90ea8d6a&from=3&record_type=2) 提取密码：Q6M4
+- 资料：[PPT](https://docs.google.com/presentation/d/1IGCnAhAFjoI_Nk5CzTIAjN0CgDYhaUqW1mYXvlvsgS8/edit?usp=sharing)
 
 **二、Move 基础知识以及入门**
 
