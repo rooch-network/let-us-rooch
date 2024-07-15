@@ -19,8 +19,8 @@ web2选手,golang
 
 ### 学习成果
 
-1.
+1. [bitcoin regtest同步区块高度1001](./image/journal/1720781269380.png)
 
-2.
+2. [水了一个commit](https://github.com/rooch-network/rooch/commit/6a10c51ce7940745c8f087db3a66bdad5c0d27d8)
 
 3.

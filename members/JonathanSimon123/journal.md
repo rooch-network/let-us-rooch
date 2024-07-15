@@ -5,7 +5,6 @@
 
 
 ```
-
 # The bitcoin data in the host machine is stored in $HOME/.bitcoin/regtest
 docker run -d \
     --name bitcoind_regtest \
