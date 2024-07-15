@@ -46,3 +46,24 @@
 ```
 
 ![alt text](image-5.png)
+
+5. 方便 rpc 请求，配置文件 `bitcoin.conf` 添加 rpc 授权信息
+
+```conf
+rpcuser=admin
+rpcpassword=admin
+```
+
+启动的时候，使用全路径指定配置文件:
+
+```shell
+./bin/bitcoind -conf=/root/bitcoin-27.1/bitcoin.conf
+```
+
+curl 使用 rpc 调用，获取节点信息:
+
+```shell
+ curl -u admin:admin --data-binary '{"jsonrpc": "1.0", "id":"curltest", "method": "getblockchaininfo", "params": [] }'  http://127.0.0.1:8332/ | jq
+```
+
+![alt text](image-6.png)
