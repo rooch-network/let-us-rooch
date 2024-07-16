@@ -41,6 +41,8 @@ Rooch 开发者训练营正式开启报名，具体课程为期 6 周，第一�
   - Rooch 核心开发者，区块链技术爱好者，10+ 年开发经验，先后在新浪微博/映客/WestarLabs 做架构设计和技术开发，21 年开始专注在区块链行业，开发公链和建设生态基础设施。
 - Sven
   - 连续创业者，曾任互联网从业经验 10 多年，2021 年后专注于区块链基础设施领域，致力于 Web3 的广泛采用
+- MX
+  - 区块链从业者，Move 语言布道者，21 年后专注于区块链领域，具备多链开发经验，致力于 Web3 的广泛采用
 
 ### 课程大纲
 
@@ -48,6 +50,8 @@ Rooch 开发者训练营正式开启报名，具体课程为期 6 周，第一�
 
 - 讲师：Haichao
 - 时间：2024年7月10日
+- 视频：[腾讯会议录制](https://meeting.tencent.com/user-center/shared-record-info?id=8ed2b5d7-53ae-4413-abd8-a1fc90ea8d6a&from=3&record_type=2) 提取密码：Q6M4
+- 资料：[PPT](https://docs.google.com/presentation/d/1IGCnAhAFjoI_Nk5CzTIAjN0CgDYhaUqW1mYXvlvsgS8/edit?usp=sharing)
 
 **二、Move 基础知识以及入门**
 
@@ -60,17 +64,19 @@ Rooch 开发者训练营正式开启报名，具体课程为期 6 周，第一�
 
 - 时间：2024年7月24日
 
-**四、Rooch DApp 以及 SDK 开发**
+**四、Rooch Move 框架和功能介绍**
+
+- 讲师：MX
+- 时间：2024年7月30日
+
+**五、Rooch DApp 以及 SDK 开发**
 
 - 讲师：Sven
 - 时间：2024年7月31日
 
-**五、Bitcoin & Rooch 案例分享**
-
-- 讲师：Jolestar
-- 时间：2024年8月7日
-
 **六、黑客松**
+
+- 为期十天
 
 期待你在 Rooch Network 生根发芽！
 
@@ -89,6 +95,8 @@ Rooch 开发者训练营正式开启报名，具体课程为期 6 周，第一�
 每周统计一次得分，公示在 [Scoring](./scoring.md) 中。
 
 ## 结业仪式
+
+- 时间：2024年8月10日
 
 线上公布分值，颁发奖品
 
