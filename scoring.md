@@ -28,6 +28,7 @@
 | 24  | houddup           | 古德              | 50     |        |        |        |        |        |      |
 | 25  | xiaowucrypto      | 123木头人         | 50     |        |        |        |        |        |      |
 | 26  | Serlight          |                   | 50     |        |        |        |        |        |      |
+| 27  | newraina          | newraina          |        |        |        |        |        |        |      |
 
 ## 每周备注
 
