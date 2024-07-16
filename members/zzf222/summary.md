@@ -1,2 +1,2 @@
 # 学习成果
-![alt text](1.png)
+![alt text](image/1.png)
