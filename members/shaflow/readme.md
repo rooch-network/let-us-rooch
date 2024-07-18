@@ -10,7 +10,7 @@
 
 * BTC 地址：bcrt1plka37ry64xdngunzeqdmyghrurzq4tds6lqax954l86g2chn3tgq7kptuq
 
-合约审计，星航计划三期学员，熟悉solidity，Sui合约开发语言
+合约审计，星航计划三期学员，熟悉solidity，Sui
 
 ### 学习日志
 
