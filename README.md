@@ -57,6 +57,8 @@ Rooch 开发者训练营正式开启报名，具体课程为期 6 周，第一�
 
 - 讲师：Bai Chuan
 - 时间：2024年7月17日
+- 视频：[腾讯会议录制](https://meeting.tencent.com/v2/cloud-record/share?id=d17e2e11-a36c-481e-98bf-a5f6b73c8ddd&from=3&is-single=false&record_type=2) 提取密码：2S1O
+- 资料：[PPT](https://docs.google.com/presentation/d/1LQCSmpEArqkcYcXU3C4P-n-6DK-LLsHBaWMluMksCGg)
 
 **三、Rooch 介绍以及开发入门**
 
