@@ -4,7 +4,7 @@
 
 * Github ID：[shaflow01](https://github.com/shaflow01)
 
-* 微信号：wechatNumber
+* 微信号：wxid_b0rpsqo3bept22
 
 * 邮箱：shaflow01@gmail.com
 
