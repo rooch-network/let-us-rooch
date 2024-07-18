@@ -1,6 +1,6 @@
 # 学习日志
 * ## 第二次作业 *
-本地部署了第一个`rooch`合约：[hello_rooch](!let-us-rooch\members\gunksd\Homework2\hello_rooch\sources\hello_rooch.move)
+本地部署了第一个`rooch`合约：[hello_rooch](members/gunksd/Homework2/hello_rooch/sources/hello_rooch.move)
 本次作业一波三折，也令我汗流浃背。
 历时两天，先是前置准备工作一开始用的wsl，然后由于网络问题报了一堆错，难以解决。
 故而转为Windows系统，然后在过程中又遇到了一个libc的`siginfo_t`Type与win不兼容的问题，想尝试着解决，添加一个跨平台的方法，
