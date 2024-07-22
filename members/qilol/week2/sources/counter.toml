@@ -1,0 +1,14 @@
+module hello_rooch::quick_start_counter {
+    use moveos_std::account;
+    struct Counter has key {
+        count_value: u64
+    }
+    fun init() {
+        let signer = moveos_std::signer::module_signer<Counter>();
+        account::move_resource_to(&signer, Counter { count_value: 0 });
+    }
+    entry fun increase() {
+        let counter = account::borrow_mut_resource<Counter>(@hello_rooch);
+        counter.count_value = counter.count_value + 1;
+    }
+}
