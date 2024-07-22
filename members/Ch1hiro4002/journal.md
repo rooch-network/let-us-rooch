@@ -15,7 +15,7 @@ sudo docker run lncm/bitcoind:v25.1
 运行结果：
 
 ![](./imgs/01.png)
-<<<<<<< HEAD
+
 
 ## Task2：部署第一个合约
 
@@ -66,4 +66,4 @@ sudo docker run lncm/bitcoind:v25.1
    `rooch move publish`
 
 ![](./imgs/02.png)
-=======
+
