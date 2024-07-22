@@ -12,7 +12,7 @@
 | 8   | birchwork         | 0xbirch              | 50     |        |        |        |        |        |      |
 | 9   | qShirley          | Shirley（未添加）    | 50     | **60** |        |        |        |        |      |
 | 10  | cyp05             | 恰好                 | 50     |        |        |        |        |        |      |
-| 11  | 1pzq              | 建设……               | 50     |        |        |        |        |        |      |
+| 11  | 1pzq              | 建设……               | 50     | 50     |        |        |        |        |      |
 | 12  | baicaiyihao       | stom698              | 50     | 50     |        |        |        |        |      |
 | 13  | QiLOL             | qilol                | 50     |        |        |        |        |        |      |
 | 14  | bityoume          | rzexin               | 50     |        |        |        |        |        |      |
