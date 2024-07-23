@@ -4,7 +4,7 @@
 
 * Github ID：[baicaiyihao](https://github.com/baicaiyihao)
 
-* 微信号：zxc32646
+* 微信号：zxc32656
 
 * 邮箱：arkcam698@gmail.com
 
@@ -17,10 +17,10 @@
 - [学习日志](journal.md)
 - [学习总结](summary.md)
 
-### 学习成果
-
-1.
-
-2.
+### 学习成果  
+  
+1.完成本地部署bitcore全节点并同步数据  
+  
+2.完成本地网络合约部署  
 
 3.
