@@ -68,3 +68,15 @@ rooch move build
 
 rooch move publish
 ```
+
+### 5. 常用rooch命令
+```shell
+# get account list
+rooch account list
+
+# get account balance
+rooch account balance
+
+# get env list
+rooch env list
+```
