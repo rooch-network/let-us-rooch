@@ -7,7 +7,7 @@
 | 3   | K-tang-mkv        | Gant-fin             | **60** | 50     |        |        |        |        |      |
 | 4   | AricRedemption    | 復*徝                | 50     | 50     |        |        |        |        |      |
 | 5   | visabc            | 自由的雨             | 50     | 50     |        |        |        |        |      |
-| 6   | gunksd            | Awan                 | **60** | **60** |        |        |        |        |      |
+| 6   | gunksd            | Awan                 | **60** | 50     |        |        |        |        |      |
 | 7   | lybenson          | Syen                 | **60** | 50     |        |        |        |        |      |
 | 8   | birchwork         | 0xbirch              | 50     |        |        |        |        |        |      |
 | 9   | qShirley          | Shirley（未添加）    | 50     | **60** |        |        |        |        |      |
@@ -19,7 +19,7 @@
 | 15  | Azhan1431         | 源头源脑源肚皮       | 50     | 50     |        |        |        |        |      |
 | 16  | v1xingyue         | 星sir                | **60** | **60** |        |        |        |        |      |
 | 17  | magician007       | 一只幸福的小猪       | 50     |        |        |        |        |        |      |
-| 18  | huisq             | 安                   | 50     | 50     |        |        |        |        |      |
+| 18  | huisq             | 安                   | 50     | **60** |        |        |        |        |      |
 | 19  | Ch1hiro4002       | Ch1hiro              | 50     | 50     |        |        |        |        |      |
 | 20  | dgu0323           | 晨儿哥               | 50     |        |        |        |        |        |      |
 | 21  | Al17er            | 棟梁                 | 50     | **60** |        |        |        |        |      |
@@ -53,10 +53,10 @@
   - [7-17 homework #46](https://github.com/rooch-network/let-us-rooch/pull/46)
   - [finsh task2 #48](https://github.com/rooch-network/let-us-rooch/pull/48)
   - [task2 #49](https://github.com/rooch-network/let-us-rooch/pull/49)
-- 前三名优秀作业：gunksd、v1xingyue、newraina
-  - [Homework2 #53](https://github.com/rooch-network/let-us-rooch/pull/53)
+- 前三名优秀作业：v1xingyue、newraina、huisq
   - [task2 #62](https://github.com/rooch-network/let-us-rooch/pull/62)
   - [task2: newraina #63](https://github.com/rooch-network/let-us-rooch/pull/63)
+  - [huisq task2 #66](https://github.com/rooch-network/let-us-rooch/pull/66)
 
 ### 第三周
 
