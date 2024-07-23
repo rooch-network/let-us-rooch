@@ -4,3 +4,8 @@
 
 ![同步区块信息](./imgs/task01_1.png)
 ![获取1000高度的区块信息](./imgs/task01_2.png)
+
+## task02 部署rooch合约
+
+![部署合约](./imgs/task02_1.png)
+![查看合约状态](./imgs/task02_2.png)
