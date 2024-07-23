@@ -1,0 +1,36 @@
+# 学习成果
+
+## Week 2:
+### 1. 分析Move生态里的Object Model
+
+| **Feature**                 | **Aptos**                                                               | **Sui**                                                              | **Rooch**                                                           |
+|-----------------------------|-------------------------------------------------------------------------|---------------------------------------------------------------------|---------------------------------------------------------------------|
+| **Ownership Model**         | Account-based                                                           | Object-based                                                        | Object-based with ownership types                                   |
+| **Object Representation**   | Assets managed within accounts as resources                             | Each asset is a unique object with a specific ID                    | Each asset is an object with specific ownership properties          |
+| **Ownership Management**    | Managed within accounts and controlled via smart contracts              | Direct ownership recorded in object's metadata                      | Objects can be system-owned or user-owned, with specific ownership flags |
+| **Object Types**            | Resources and tokens within accounts                                    | Unique objects with explicit ownership metadata                     | SystemOwnedObject (owner as 0x0), UserOwnedObject (owner non-equal to 0x0) |
+| **Object Flags**            | Not applicable                                                          | Address-Owned Objects, Immutable Objects, Shared Objects, Wrapped Objects | Normal (default for UserOwnedObject), SharedObject, FrozenObject    |
+| **Transfer Mechanism**      | Transactions between accounts                                           | Transactions update object's metadata to reflect new owner          | Transactions update 'owner' 'ObjectEntity' to reflect new owner     |
+| **Programming Paradigm**    | Move (resource-oriented)                                                | Move (object-centric)                                               | Move (object-centric with scope and ownership type management)      |
+| **Granularity of Control**  | At the account level                                                    | At the object level                                                 | At the object level, with additional control through ownership types and flags |
+| **Shared Ownership**        | Managed through smart contracts and multisig accounts                   | SharedObject allows multiple accounts to access and mutate          | SharedObject flag allows everyone to get a &mut reference           |
+| **Restricted Access**       | Managed through account permissions and smart contract logic            | Immutable object - can't be mutated, transferred, or deleted        | FrozenObject flag restricts &mut reference access                   |
+| **Storage Abstraction**     | Hierarchical key-value storage model; each account maintains separate storage for its data and resources | Flexible storage model; each object encapsulates its own data, allowing efficient access and modification | Hybrid storage model; combines on-chain and off-chain storage, with on-chain metadata pointing to off-chain data for scalability and efficiency |
+
+### 2. 常用的Object-related Method列表对应表
+
+| **Function/Purpose**        | **Aptos**                                                                       | **Sui**                                           | **Rooch**                                                                    |
+|-----------------------------|----------------------------------------------------------------------------------|--------------------------------------------------|-------------------------------------------------------------------------------|
+| **Create Object**           | `public fun create_object(owner_address: address): ConstructorRef`               | `public fun new(ctx: &mut TxContext): UID`        | `#[private_generics(T)] public fun new<T: key>(value: T): Object<T>`          |
+| **Named Object**            | `public fun create_named_object(creator: &signer, seed: vector<u8>): object::ConstructorRef` | Not specified                                    | `#[private_generics(T)] object::new_named_object<T: key>(T): Object<T>`       |
+| **Account Named Object**    | Not specified                                                                    | Not specified                                    | `#[private_generics(T)] object::new_account_named_object<T: key>(address, T): Object<T>` |
+| **Borrow Object**           | Not specified                                                                    | `public fun borrow<T: key>(self: &Object<T>): &T` | `public fun borrow_object<T: key>(object_id: ObjectID): &Object<T>`           |
+| **Borrow Mutable Object**   | Not specified                                                                    | `public fun borrow_mut<Name: copy + drop + store, Value: key + store>(object: &mut UID, name: Name): &mut Value` | `public fun borrow_mut_object<T: key>(owner: &signer, object_id: ObjectID): &mut Object<T>` |
+| **Take Object**             | `public fun object_from_constructor_ref<T: key>(ref: &ConstructorRef): Object<T>` | Not specified                                    | `public fun take_object<T: key + store>(owner: &signer, object_id: ObjectID): Object<T>` |
+| **Borrow Inner Value**      | Not specified                                                                    | `public fun borrow<Name: copy + drop + store, Value: key + store>(object: &UID, name: Name): &Value` | `public fun borrow<T: key>(self: &Object<T>): &T`                             |
+| **Borrow Mutable Inner Value** | Not specified                                                                | `public fun borrow_mut<Name: copy + drop + store, Value: key + store>(object: &mut UID, name: Name): &mut Value` | `public fun borrow_mut<T: key>(self: &mut Object<T>): &mut T`                 |
+| **Transfer Object**         | `public fun transfer_with_ref(ref: LinearTransferRef, to: address) acquires ObjectCore, TombStone` | `public fun transfer<T: key>(obj: T, recipient: address)` | `public fun transfer<T: key + store>(self: Object<T>, new_owner: address)`    |
+| **Public Transfer Object**  | Not specified                                                                    | `public fun public_transfer<T: key + store>(obj: T, recipient: address)` | `public fun take_object<T: key + store>(owner: &signer, object_id: ObjectID): Object<T>` |
+| **Share Object**            | Not specified                                                                    | `public fun share_object<T: key>(obj: T)`         | Not specified                                                                |
+| **Delete Object**           | `public fun delete(ref: DeleteRef) acquires Untransferable, ObjectCore`          | `public fun delete(id: UID)`                      | `#[private_generics(T)] public fun remove<T: key>(self: Object<T>): T`        |
+
