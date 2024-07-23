@@ -41,15 +41,21 @@ rooch move new quick_start_counter
 
 ### 3. 创建合约
 ```move
-module hello_rooch::hello_rooch {
+module quick_start_counter::quick_start_counter {
     use moveos_std::account;
-    use std::string;
-    struct HelloMessage has key {
-        text: string::String
+
+    struct Counter has key {
+        count_value: u64
     }
-    entry fun say_hello(owner: &signer) {
-        let hello = HelloMessage { text: string::utf8(b"Hello Rooch!") };
-        account::move_resource_to(owner, hello);
+
+    fun init() {
+        let signer = moveos_std::signer::module_signer<Counter>();
+        account::move_resource_to(&signer, Counter { count_value: 0 });
+    }
+
+    entry fun increase() {
+        let counter = account::borrow_mut_resource<Counter>(@quick_start_counter);
+        counter.count_value = counter.count_value + 1;
     }
 }
 ```
