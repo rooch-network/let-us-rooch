@@ -3,34 +3,35 @@
 | No. | 学员（GitHub ID） | VGroup Name          | 第一周 | 第二周 | 第三周 | 第四周 | 第五周 | 第六周 | 总分 |
 |-----|-------------------|----------------------|--------|--------|--------|--------|--------|--------|------|
 | 1   | keienWang         | Keien@               | **60** |        |        |        |        |        |      |
-| 2   | TheHeBoy          | Anchor               | **60** |        |        |        |        |        |      |
-| 3   | K-tang-mkv        | Gant-fin             | **60** |        |        |        |        |        |      |
-| 4   | AricRedemption    | 復*徝                | 50     |        |        |        |        |        |      |
-| 5   | visabc            | 自由的雨             | 50     |        |        |        |        |        |      |
-| 6   | gunksd            | Awan                 | **60** |        |        |        |        |        |      |
-| 7   | lybenson          | Syen                 | **60** |        |        |        |        |        |      |
+| 2   | TheHeBoy          | Anchor               | **60** | 50     |        |        |        |        |      |
+| 3   | K-tang-mkv        | Gant-fin             | **60** | 50     |        |        |        |        |      |
+| 4   | AricRedemption    | 復*徝                | 50     | 50     |        |        |        |        |      |
+| 5   | visabc            | 自由的雨             | 50     | 50     |        |        |        |        |      |
+| 6   | gunksd            | Awan                 | **60** | 50     |        |        |        |        |      |
+| 7   | lybenson          | Syen                 | **60** | 50     |        |        |        |        |      |
 | 8   | birchwork         | 0xbirch              | 50     |        |        |        |        |        |      |
-| 9   | qShirley          | Shirley（未添加）    | 50     |        |        |        |        |        |      |
-| 10  | cyp05             | 恰好                 | 50     |        |        |        |        |        |      |
-| 11  | 1pzq              | 建设……               | 50     |        |        |        |        |        |      |
-| 12  | baicaiyihao       |                      | 50     |        |        |        |        |        |      |
-| 13  | QiLOL             | qilol                | 50     |        |        |        |        |        |      |
-| 14  | bityoume          | rzexin               | 50     |        |        |        |        |        |      |
-| 15  | Azhan1431         | 源头源脑源肚皮       | 50     |        |        |        |        |        |      |
-| 16  | v1xingyue         | 星sir                | **60** |        |        |        |        |        |      |
+| 9   | qShirley          | Shirley（未添加）    | 50     | **60** |        |        |        |        |      |
+| 10  | cyp05             | 恰好                 | 50     | 50     |        |        |        |        |      |
+| 11  | 1pzq              | 建设……               | 50     | 50     |        |        |        |        |      |
+| 12  | baicaiyihao       | stom698              | 50     | 50     |        |        |        |        |      |
+| 13  | QiLOL             | qilol                | 50     | 50     |        |        |        |        |      |
+| 14  | bityoume          | rzexin               | 50     | 50     |        |        |        |        |      |
+| 15  | Azhan1431         | 源头源脑源肚皮       | 50     | 50     |        |        |        |        |      |
+| 16  | v1xingyue         | 星sir                | **60** | **60** |        |        |        |        |      |
 | 17  | magician007       | 一只幸福的小猪       | 50     |        |        |        |        |        |      |
-| 18  | huisq             | 安                   | 50     |        |        |        |        |        |      |
-| 19  | Ch1hiro4002       | Ch1hiro              | 50     |        |        |        |        |        |      |
+| 18  | huisq             | 安                   | 50     | **60** |        |        |        |        |      |
+| 19  | Ch1hiro4002       | Ch1hiro              | 50     | 50     |        |        |        |        |      |
 | 20  | dgu0323           | 晨儿哥               | 50     |        |        |        |        |        |      |
-| 21  | Al17er            | 棟梁                 | 50     |        |        |        |        |        |      |
-| 22  | JonathanSimon123  | Simon                | 50     |        |        |        |        |        |      |
-| 23  | jeffierw          | 害虫                 | 50     |        |        |        |        |        |      |
-| 24  | houddup           | 古德                 | 50     |        |        |        |        |        |      |
-| 25  | xiaowucrypto      | 123木头人            | 50     |        |        |        |        |        |      |
+| 21  | Al17er            | 棟梁                 | 50     | **60** |        |        |        |        |      |
+| 22  | JonathanSimon123  | Simon                | 50     | 50     |        |        |        |        |      |
+| 23  | jeffierw          | 害虫                 | 50     | **60** |        |        |        |        |      |
+| 24  | houddup           | 古德                 | 50     | 50     |        |        |        |        |      |
+| 25  | xiaowucrypto      | 123木头人            | 50     | 50     |        |        |        |        |      |
 | 26  | Serlight          |                      | 50     |        |        |        |        |        |      |
-| 27  | newraina          | newraina             | 50     |        |        |        |        |        |      |
+| 27  | newraina          | newraina             | 50     | **60** |        |        |        |        |      |
 | 28  | Serlight          | 韭黄                 | 50     |        |        |        |        |        |      |
 | 29  | zzf222            | 昵称过于强大无法显示 | 50     |        |        |        |        |        |      |
+| 30  | shaflow01         |                      |        | 50     |        |        |        |        |      |
 
 ## 每周备注
 
@@ -48,8 +49,14 @@
 
 ### 第二周
 
-- 前三名提交：<++>、<++>、<++>
-- 前三名优秀作业：<++>、<++>、<++>
+- 前三名提交：qShirley、Al17er、jeffierw
+  - [7-17 homework #46](https://github.com/rooch-network/let-us-rooch/pull/46)
+  - [finsh task2 #48](https://github.com/rooch-network/let-us-rooch/pull/48)
+  - [task2 #49](https://github.com/rooch-network/let-us-rooch/pull/49)
+- 前三名优秀作业：v1xingyue、newraina、huisq
+  - [task2 #62](https://github.com/rooch-network/let-us-rooch/pull/62)
+  - [task2: newraina #63](https://github.com/rooch-network/let-us-rooch/pull/63)
+  - [huisq task2 #66](https://github.com/rooch-network/let-us-rooch/pull/66)
 
 ### 第三周
 
