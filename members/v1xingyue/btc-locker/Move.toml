@@ -1,0 +1,16 @@
+[package]
+name = "btc-locker"
+version = "0.0.1"
+
+[dependencies]
+MoveStdlib = { local = "../../rooch/frameworks/move-stdlib" }
+MoveosStdlib = { local = "../../rooch/frameworks/moveos-stdlib" }
+RoochFramework = { local = "../../rooch/frameworks/rooch-framework" }
+BitcoinMove = { local = "../../rooch/frameworks/bitcoin-move" }
+
+[addresses]
+btc_locker = "0xaef440f63dbbad67c3ce25dfc863e18dc603565e57f009eaa846d31356299558"
+std = "0x1"
+moveos_std = "0x2"
+rooch_framework = "0x3"
+bitcoin_move =  "0x4"
