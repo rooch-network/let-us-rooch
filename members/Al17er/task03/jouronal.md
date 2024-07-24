@@ -5,8 +5,7 @@ curl -fsSL https://bun.sh/install | bash
 
 ##配置bun环境变量：
 PATH=/root/.bun/bin/:$PATH
-![
-](image-1.png)
+![](image-1.png)
 
 ##下载dapp源码：
 git clone https://github.com/rooch-network/my-first-rooch-dapp.git
@@ -17,6 +16,7 @@ bun install
 ![alt text](image-3.png)
 
 ##启动dapp:bun dev --host 192.168.221.147
+
 ![alt text](image-4.png)
 
 ##访问192.168.221.147:5173
