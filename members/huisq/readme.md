@@ -2,7 +2,7 @@
 
 ### 个人介绍
 
-* Github ID：[huis1](https://github.com/huis1)
+* Github ID：[huisq](https://github.com/huisq)
 
 * 微信号：hui3nnn
 

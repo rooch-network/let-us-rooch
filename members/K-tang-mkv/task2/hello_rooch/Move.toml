@@ -1,0 +1,14 @@
+[package]
+name = "hello_rooch"
+version = "0.0.1"
+
+[dependencies]
+MoveStdlib = { git = "https://github.com/rooch-network/rooch.git", subdir = "frameworks/move-stdlib", rev = "main" }
+MoveosStdlib = { git = "https://github.com/rooch-network/rooch.git", subdir = "frameworks/moveos-stdlib", rev = "main" }
+RoochFramework = { git = "https://github.com/rooch-network/rooch.git", subdir = "frameworks/rooch-framework", rev = "main" }
+
+[addresses]
+hello_rooch = "0x2b9fbdbc09e0575ecdbdb8eb72f6b40514e64006ad9d47a85dbfccfd8124ecfe"
+std = "0x1"
+moveos_std = "0x2"
+rooch_framework = "0x3"
