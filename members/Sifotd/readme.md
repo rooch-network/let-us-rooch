@@ -20,6 +20,6 @@
 
 1.![节点窗口 2024_7_27 14_09_02](C:\Users\ASUS\Videos\Captures\节点窗口 2024_7_27 14_09_02.png)
 
-2.
+2.![1722131755399](C:\Users\ASUS\Desktop\let-us-rooch\members\Sifotd\task2\1722131755399.png)
 
 3.
