@@ -5,3 +5,6 @@
 
 ## 第二次作业 （部署hello_rooch合约）
 1.学会如何领取水，与发布合约
+
+## 第三次作业（部署第一个Dapp）
+[text](task03/jouronal.md)
