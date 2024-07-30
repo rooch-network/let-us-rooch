@@ -17,3 +17,19 @@
 ![img](./task2/task2-1.jpg)  
 2、部署合约  
 ![img](./task2/task2-2.jpg)  
+
+**task3**  
+1、部署dapp  
+下载代码  
+ `git clone https://github.com/rooch-network/my-first-rooch-dapp.git`  
+安装bun  
+`curl -fsSL https://bun.sh/install | bash`  
+下载依赖  
+`bun install`
+部署  
+`my-first-rooch-dapp % bun dev`  
+`counter_contract % rooch move publish --named-addresses quick_start_counter=default`  
+然后修改app.tsx  
+![img](./task3/task3-1.jpg)   
+2、合约交互  
+![img](./task3/task3-2.jpg)  
