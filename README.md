@@ -63,8 +63,9 @@ Rooch 开发者训练营正式开启报名，具体课程为期 6 周，第一�
 **三、Rooch 介绍以及开发入门**
 
 - 讲师：Jolestar
-
 - 时间：2024年7月24日
+- 视频：[录制回放](https://pan.baidu.com/s/1AHkNWAcwOYQlGxwrNIW8jg?pwd=3xrj) 提取密码：3xrj
+- 资料：[PPT](https://docs.google.com/presentation/d/1aGiUgWjro61lZtHycXPUNgmBckQ9PAtv3_ApE96CLXc/edit?usp=sharing)
 
 **四、Rooch Move 框架和功能介绍**
 

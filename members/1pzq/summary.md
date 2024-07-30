@@ -46,3 +46,28 @@
 4.易于集成：对于 Layer 2 开发者而言，STONE 的易于集成性降低了技术门槛，使得更多的项目可以快速采用 StakeStone 的流动性质押服务。
 5.用户体验：StakeStone 的设计注重用户体验，通过简化的操作流程和直观的界面，使得即使是 DeFi 新手也能够轻松参与。
 ***
+
+
+### 第二次作业
+```move
+module quick_start_counter::quick_start_counter {
+    use moveos_std::account;
+    struct Counter has key {
+        count_value: u64
+    }
+    fun init() {
+        let signer = moveos_std::signer::module_signer<Counter>();
+        account::move_resource_to(&signer, Counter { count_value: 0 });
+    }
+    entry fun increase() {
+        let counter = account::borrow_mut_resource<Counter>(@quick_start_counter);
+        counter.count_value = counter.count_value + 1;
+    }
+}
+```
+### 成功build截图
+
+![](image/2.1.png)
+
+### 成功在dev环境部署成功截图
+![](image/2.2.png)
