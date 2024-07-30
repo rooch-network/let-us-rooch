@@ -19,4 +19,9 @@
 
 ### 学习成果
 - [x] Bitcoin 全节点
-![img.png](images/img.png)
+
+![img.png](images/img2.png)
+
+- [X] 部署你的第一个合约
+  - dev 网不需要领取 gascoin
+![img.png](images/img2.png)
