@@ -71,6 +71,8 @@ Rooch 开发者训练营正式开启报名，具体课程为期 6 周，第一�
 
 - 讲师：MX
 - 时间：2024年7月30日
+- 视频：[腾讯会议录制](https://meeting.tencent.com/v2/cloud-record/share?id=bccd5603-dcf8-4ff7-8174-02d686325bf8&from=3&record_type=2) 提取密码：TQMB
+- 资料：[PPT](https://docs.google.com/presentation/d/120EXVamRC3WLs_1KIagat1A5GvvL3X8uUJKOmmM85z8/edit?usp=sharing)
 
 **五、Rooch DApp 以及 SDK 开发**
 
@@ -79,7 +81,9 @@ Rooch 开发者训练营正式开启报名，具体课程为期 6 周，第一�
 
 **六、黑客松**
 
-- 为期十天
+- 产出：demo + ppt 介绍
+- 时间：10 天左右
+- 挑选 5 个项目进入加速器，有奖
 
 期待你在 Rooch Network 生根发芽！
 
