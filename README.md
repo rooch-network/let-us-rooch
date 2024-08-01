@@ -79,7 +79,7 @@ Rooch 开发者训练营正式开启报名，具体课程为期 6 周，第一�
 - 讲师：Sven
 - 时间：2024年7月31日
 - 视频：[腾讯会议录制](https://meeting.tencent.com/v2/cloud-record/share?id=be0326b5-bf14-4c5c-a4b5-aa6e1ea4dfa5&from=3&record_type=2)
-- 资料：[PPT](https://docs.google.com/presentation/d/120EXVamRC3WLs_1KIagat1A5GvvL3X8uUJKOmmM85z8/edit?usp=sharing)
+- 资料：[PPT](https://docs.google.com/presentation/d/1_SyS_qqRfbTpaP3V26eTitzVgx9UHqqjWVh71EG6Sbk/edit?usp=sharing)
 
 **六、黑客松**
 
