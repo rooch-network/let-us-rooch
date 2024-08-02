@@ -490,8 +490,6 @@ rooch move run --function default::collection::create_collection_entry --args St
 
 创建完成后，观察输出，可以看到 collection_id:
 
-````json
-
 ```json
 "metadata": {
     "id": "0x27931f31a1c5821c9435d79695ebf6de1850795d25faf6b3212da88478ccc5a8",
@@ -509,6 +507,7 @@ rooch move run --function default::collection::create_collection_entry --args St
 ### mint nft
 
 mint 之前需要保证你的 account 有足够的 HDC Token,如果没有，请参考 task3 mint 一些。
+
 ```shell
 rooch move run --function default::btc_nft::mint_entry --args object_id:$collection_id --args String:'my nft name'
 ```
@@ -518,9 +517,11 @@ rooch move run --function default::btc_nft::mint_entry --args object_id:$collect
 ```shell
 rooch object --owner rooch1r080w5hrzzaxrgm7zx8uh8l2wvyze05lmt4yqng8lkzggt8yvd3sec4m2m
 ```
+
 ![alt text](./images/my_nft.png)
+
 ```
 
 ### 确认下 resource 下的 balance 变化
 ![alt text](./images/resource_new_blance.png)
-````
+```
