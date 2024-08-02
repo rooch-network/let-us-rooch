@@ -520,8 +520,6 @@ rooch object --owner rooch1r080w5hrzzaxrgm7zx8uh8l2wvyze05lmt4yqng8lkzggt8yvd3se
 
 ![alt text](./images/my_nft.png)
 
-```
-
 ### 确认下 resource 下的 balance 变化
+
 ![alt text](./images/resource_new_blance.png)
-```
