@@ -429,3 +429,98 @@ rooch rpc request --method btc_queryUTXOs --params '[{"owner":"bcrt1pjm76nh0td4h
 ```shell
 rooch move run --function default::holder_coin::claim_special --args object_id:$holder_id --args object_id:$utxo_id | jq ".execution_info"
 ```
+
+## task4 部署一个 nft 合约 , mint 的时候消耗 task3 中的 HDC coin
+
+代码文件分两个:
+
+- collection.move 集合文件，一个 nft 会属于一个集合，创建 nft 之前先创建对应的集合
+- btc_nft.move nft 合约文件，其中包含 nft 的相关操作，mint 部分做了一些修改。
+
+### 修改 1 init 的时候，注册 Global 的 Resource,并将其转移到 当前模块下:
+
+```move
+
+// struct 信息
+struct Global has key, store {
+        coin_store: object::Object<coin_store::CoinStore<HDC>>
+}
+
+....
+注册部分
+let coin_store = coin_store::create_coin_store<HDC>();
+let signer = moveos_std::signer::module_signer<NFT>();
+account::move_resource_to(&signer, Global{
+    coin_store,
+});
+...
+
+```
+
+### 修改 2 mint 的时候，将 coin 转移到当前模块下
+
+```move
+let  mint_gas = 1000;
+let g = account::borrow_mut_resource<Global>(@btc_locker);
+let user_coin = account_coin_store::withdraw<HDC>(s,mint_gas);
+coin_store::deposit<HDC>(&mut g.coin_store, user_coin);
+```
+
+同时需要注意的是: 使用到了 signer ， 所以，需要定义 entry 的时候添加上 signer 参数。
+
+### 代码部署
+
+代码部署需要分两步，因为 nft 在 init 的时候 ， 对应 Coin 信息需要已经注册。所以，先要把 task3 中的 coin 部署完成。
+
+![alt text](./images/module_resource.png)
+
+部署完成后，从当前模块的 Resource 中会取到 Global 的信息。 其中 coin_store 是一个对象，拿到这个对象 id,就可以通过各种方法监控状态。
+
+```shell
+rooch object --object-ids 0x07890f504f72b5c6148b7fee575d9d83f1cdf0ac519a832663fb56f856da1690
+```
+
+![alt text](./images/image_blance.png)
+
+### 创建 collection
+
+```shell
+rooch move run --function default::collection::create_collection_entry --args String:'hello nft collection' --args String:'https://github.com/xxxx' --args address:0x1bcef752e310ba61a37e118fcb9fea73082cbe9fdaea404d07fd84842ce46363 --args String:'description' --args u64:123456
+```
+
+创建完成后，观察输出，可以看到 collection_id:
+
+````json
+
+```json
+"metadata": {
+    "id": "0x27931f31a1c5821c9435d79695ebf6de1850795d25faf6b3212da88478ccc5a8",
+    "owner": "rooch1qqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqhxqaen",
+    "owner_bitcoin_address": null,
+    "flag": 1,
+    "state_root": "0x5350415253455f4d45524b4c455f504c414345484f4c4445525f484153480000",
+    "size": "0",
+    "created_at": "1722523616520",
+    "updated_at": "1722523616520",
+    "object_type": "0x1bcef752e310ba61a37e118fcb9fea73082cbe9fdaea404d07fd84842ce46363::collection::Collection"
+},
+```
+
+### mint nft
+
+mint 之前需要保证你的 account 有足够的 HDC Token,如果没有，请参考 task3 mint 一些。
+```shell
+rooch move run --function default::btc_nft::mint_entry --args object_id:$collection_id --args String:'my nft name'
+```
+
+### 查看我的 nft
+
+```shell
+rooch object --owner rooch1r080w5hrzzaxrgm7zx8uh8l2wvyze05lmt4yqng8lkzggt8yvd3sec4m2m
+```
+![alt text](./images/my_nft.png)
+```
+
+### 确认下 resource 下的 balance 变化
+![alt text](./images/resource_new_blance.png)
+````
