@@ -2,11 +2,11 @@
 
 ### 个人介绍
 
-* Github ID：[jolestar](https://github.com/jolestar)
+* Github ID：[jolestar](https://github.com/yurneroma)
 
-* 微信号：wechatNumber
+* 微信号：Zoro-Ma
 
-* 邮箱：example@gmail.com
+* 邮箱：mabinzq007@gmail.com
 
 * BTC 地址：（用于发放训练营的学习奖励！）
 
