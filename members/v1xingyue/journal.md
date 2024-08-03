@@ -225,3 +225,207 @@ rooch move run --function 0xaef440f63dbbad67c3ce25dfc863e18dc603565e57f009eaa846
 status 可以表示交易是否生效。
 
 ![alt text](images/btc_locker_call.png)
+
+## task3 部署本地的 rooch bitcoin 开发环境，并部署合约
+
+### 1. 节点配置
+
+节点基本环境参考 task1 中的部分，为方便测试，将 启动 bitcoin regtest 节点和 rooch 节点封装成了如下的脚本:
+
+```shell
+kill $(cat data/regtest/bitcoind.pid)
+rm -rf data/regtest
+sleep 3
+./bin/bitcoind -conf=`pwd`/bitcoin.conf
+rooch server clean --force
+rooch server start --btc-rpc-url http://127.0.0.1:18443 --btc-rpc-username bitcoin --btc-rpc-password 123456 --btc-sync-block-interval 1
+```
+
+脚本每次启动，都会删除旧的区块数据 ， 同时 rooch 的区块同步，一个区块同步一次。
+
+bitcoin.conf 中配置内容如下：
+
+```toml
+daemon=1
+datadir=/Users/rooch/outcode/git/rooch_learn/bitcoin/bitcoin-27.1/data
+txindex=1
+```
+
+配置好区块目录和 daemon 模式，开启 txindex 功能。
+
+自己启动的 regtest 节点没有旷工，所以，需要自己完成区块确认和挖矿。
+
+自定义一个 mine.sh
+
+```shell
+#!/bin/bash
+
+for i in {1..86400}; do
+   bitcoin-cli generatetoaddress 1 bcrt1p6yeymhcd4megq8dfjtlpdd6lv04p58rru2pw5ljaf6hs4ms0enyskyp5l4
+   rooch object -t 0x4::bitcoin::BitcoinBlockStore | jq ".data[0].decoded_value.value.latest_block"
+   sleep 1
+done
+
+```
+
+脚本往固定地址挖矿，并获得出块奖励。同时显示 rooch 中已经完成区块同步的高度。
+
+![](images/bitcoin_rooch_start.png)
+
+**Coinbase 产生的 UTXO 需要块高达到 100 才可以完成交易。**
+
+### 2. 部署合约
+
+合约采用 `holder_coin` 中的 `HDC` 作为基础合约。再此基础上添加 special_claim 方法。
+当符合一定条件的 UTXO 可以无需质押，就可以完成 Token 的 Claim 操作。
+
+核心代码是对 UTXO 相关交易的解析，代码实现如下：
+
+```move
+struct UTXOEvent has drop,copy {
+    msg: vector<u8>,
+    msgString: string::String,
+}
+
+fun utxo_special(utxo: &UTXO) : bool {
+    let utxo_tx =  option::destroy_some(bitcoin::get_tx(utxo::txid(utxo)));
+    let outputs = tx_output(&utxo_tx);
+    let l = vector::length(outputs);
+    let find_op_return = false;
+    while (l >0){
+        let x = vector::borrow(outputs, l-1);
+        let s = txout_script_pubkey(x);
+        if(is_op_return(s)){
+            let msg = witness_program(s);
+            event::emit(UTXOEvent{
+                msg: msg,
+                msgString: string::utf8(hex::encode(msg)) ,
+            });
+            if(msg == b"rooch"){
+                find_op_return = true;
+                break
+            }
+        };
+        l = l-1;
+    };
+    find_op_return
+}
+```
+
+1. UTXO 对象解析
+
+合约调用时候传递 `&mut Object<CoinInfoHolder>` 对象，可以通过 `let myutxo = object::borrow(utxo_obj); `获得 UTXO 对象。
+
+2. 获取交易对象
+
+使用 utxo::txid 获取交易 ID,bitcoin::get_tx 获取交易对象
+
+3. 循环遍历 output 判断是否是 OP_RETURN 类型
+
+使用 tx_output(&utxo_tx); 获得交易的输出内容。
+遍历输出内容，通过 txout_script_pubkey 获得脚本内容。
+如果 is_op_return 为 true 则表示 OP_RETURN 脚本。
+
+4. 获取 OP_RETURN 脚本内容
+
+let msg = witness_program(s); 可以获取脚本内容
+string::utf8(hex::encode(msg)) 可以解析为字符串。
+
+主要的判断逻辑为： UTXO 所在的 output 中，必须包含一个 OP_RETURN 脚本，并且脚本内容为 `rooch` 字符串。
+
+部署脚本内容:
+
+```shell
+rooch move build
+rooch move publish --max-gas-amount 50000000
+```
+
+**rooch 本地网络不需要 gas 费，直接部署即可**
+
+![rooch delploy](images/rooch_deploy_task3.png)
+
+部署完成后获取 Hodler 对象.
+
+![rooch delploy](images/rooch_deploy_task3_holder.png)
+
+### 3. 部署测试
+
+生成 UTXO 到一个客户端地址 A,要由这个地址发送带有 OP_RETURN 的 UTXO 到 rooch 的地址 B。
+
+```shell
+bitcoin-cli generatetoaddress 1 bcrt1pjm76nh0td4h92ytnccgt680clttrqpqjnw9lnruxw4x96d5pf25qcvwgxa
+```
+
+等待大约 100 个区块，发起一个交易内容。
+
+大约得交易内容如下：
+
+```rust
+let utxo_tx = "3fd12d6f5193ae5b6ec7576a85847cf9bb9d3814f1efd8f935243b4abd6cc86c";
+let utxo_idx = 0;
+let spend_account =
+Address::from_str("bcrt1pmg7tqrf92p5wt6x9t4ykxa4a098mhw7c6209qanahhpx9wxx5xsqyk5sk6")
+    .unwrap()
+    .assume_checked();
+
+let utxo_tx = rpc.get_raw_transaction(&Txid::from_str(&utxo_tx)?, None)?;
+let utxos = transaction_to_utxos(&utxo_tx);
+
+let mut unsigned_tx = {
+for (utxo, tx_out) in &utxos {
+    info!("utxo : {:?}", utxo);
+    info!("tx_out : {:?}", tx_out);
+}
+
+let send_gas = Amount::from_sat(10000);
+let input_value = utxos[utxo_idx].1.value;
+let spend_amount = Amount::ONE_BTC / 10000;
+let change_amount = input_value - spend_amount - send_gas;
+
+let input = TxIn {
+    previous_output: utxos[utxo_idx].0,
+    script_sig: ScriptBuf::default(),
+    sequence: Sequence::ENABLE_RBF_NO_LOCKTIME,
+    witness: Witness::default(),
+};
+
+let data = b"rooch";
+let op_return_script = Builder::new()
+    .push_opcode(bitcoin::blockdata::opcodes::all::OP_RETURN)
+    .push_slice(data)
+    .into_script();
+let op_return_txout = TxOut {
+    value: Amount::ZERO,
+    script_pubkey: op_return_script,
+};
+
+let spend_out: TxOut = TxOut {
+    value: spend_amount,
+    script_pubkey: spend_account.script_pubkey(),
+};
+
+let change_out = TxOut {
+    value: change_amount,
+    script_pubkey: current_address.script_pubkey(),
+};
+
+Transaction {
+    version: Version::TWO,
+    lock_time: LockTime::ZERO,
+    input: vec![input],
+    output: vec![spend_out, change_out, op_return_txout],
+}
+};
+```
+
+由于 mine.sh 的同步很快，所以，可以认为 rooch 是一个很好用的 address inderx.
+
+```shell
+rooch rpc request --method btc_queryUTXOs --params '[{"owner":"bcrt1pjm76nh0td4h92ytnccgt680clttrqpqjnw9lnruxw4x96d5pf25qcvwgxa"}, null, "30", true]'
+```
+
+获得符合条件的 UTXO ，就可以调用 special_claim 方法了。
+
+```shell
+rooch move run --function default::holder_coin::claim_special --args object_id:$holder_id --args object_id:$utxo_id | jq ".execution_info"
+```

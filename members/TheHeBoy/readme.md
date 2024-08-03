@@ -25,3 +25,7 @@
 - [X] 部署你的第一个合约
   - dev 网不需要领取 gascoin
 ![img.png](images/img2.png)
+
+- [X] 部署一个和 Bitcoin 交互的合约，使用质押合约
+![img.png](images/img3.png)
+
