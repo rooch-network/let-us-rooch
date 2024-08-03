@@ -149,3 +149,29 @@ Updated modules:
 ## 11 自增计数器
 
 ![image-20240803212938323](images/image-20240803212938323.png)
+
+## 附：错误码查看
+
+>   `frameworks/rooch-framework/sources/auth_validator/auth_validator.move`
+
+```rust
+    const ErrorValidateSequenceNuberTooOld: u64 = 1001;
+    const ErrorValidateSequenceNumberTooNew: u64 = 1002;
+    const ErrorValidateAccountDoesNotExist: u64 = 1003;
+    const ErrorValidateCantPayGasDeposit: u64 = 1004;
+    const ErrorValidateTransactionExpired: u64 = 1005;
+    const ErrorValidateBadChainId: u64 = 1006;
+    const ErrorValidateSequenceNumberTooBig: u64 = 1007;
+    const ErrorValidateMaxGasAmountExceeded: u64 = 1008;
+    /// The AuthKey in transaction's authenticator do not match with the sender's account auth key
+    const ErrorValidateInvalidAccountAuthKey: u64 = 1009;
+    /// InvalidAuthenticator, include invalid signature
+    const ErrorValidateInvalidAuthenticator: u64 = 1010;
+    /// The authenticator's auth validator id is not installed to the sender's account
+    const ErrorValidateNotInstalledAuthValidator: u64 = 1011;
+    /// The session is expired
+    const ErrorValidateSessionIsExpired: u64 = 1012;
+    /// The function call is beyond the session's scope
+    const ErrorValidateFunctionCallBeyondSessionScope: u64 = 1013;
+```
+
