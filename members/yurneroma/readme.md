@@ -8,7 +8,7 @@
 
 * 邮箱：mabinzq007@gmail.com
 
-* BTC 地址：（用于发放训练营的学习奖励！）
+* BTC 地址：bc1qnrcqa2a5x7ake7lue2dejd0sp87uen4htmhtqr
 AI 工程师，从事AGI 平台的开发。 目前对区块链感兴趣，正在学习区块链相关技术。
 
 ### 学习日志
