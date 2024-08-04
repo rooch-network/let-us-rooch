@@ -224,7 +224,7 @@ function App() {
               {data?.return_values?.[0]?.decoded_value.toString()}
             </span>
           </Typography>
-          {data == null ? (
+          {data?.return_values == null ? (
             <LoadingButton
               loading={txnLoading}
               variant="contained"
