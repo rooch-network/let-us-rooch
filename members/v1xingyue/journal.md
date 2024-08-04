@@ -523,3 +523,85 @@ rooch object --owner rooch1r080w5hrzzaxrgm7zx8uh8l2wvyze05lmt4yqng8lkzggt8yvd3se
 ### 确认下 resource 下的 balance 变化
 
 ![alt text](./images/resource_new_blance.png)
+
+## task5 部署一个 Counter 合约的 dapp
+
+### 1. 使用 git 下载最新的 my-first-rooch-dapp
+
+```shell
+git clone https://github.com/rooch-network/my-first-rooch-dapp.git
+```
+
+代码分成两个部分 :
+
+- counter_contract 部分，这里是合约代码
+- 前端代码 也就是当前的目录
+
+作业的代码在 my-first-rooch-dapp 目录下。
+
+### 2. 修改合约代码
+
+默认的项目包含的 counter 合约代码，所有地址共享一个 Counter 对象。
+
+```move
+entry fun mint(signer:&signer){
+    account::move_resource_to(signer, Counter { count_value: 0 });
+}
+
+entry fun increase(signer:&signer) {
+    let counter = account::borrow_mut_resource<Counter>(signer::address_of(signer));
+    counter.count_value = counter.count_value + 1;
+}
+
+public fun value(addr:address): u64{
+    let counter = account::borrow_mut_resource<Counter>(addr);
+    counter.count_value
+}
+```
+
+- 添加 mint 代码，在调用地址的 Resource 地址下 ，发放构建好的 Counter 对象。
+- 修改 increase 代码，在调用地址的 Resource 地址下 ，增加 count_value 字段。
+- 修改 value 代码，传递一个地址，获取 对应的 count_value 字段。
+
+### 3. 修改前端代码
+
+- 修改合约地址,改成你部署的地址:
+
+```ts
+const counterAddress =
+  "0x0cc94c5429368b2dcd7ebfca18b65e891d8ae0fad6371514d42f4c7d6f50d9cf";
+```
+
+- 添加一个 mint 操作:
+
+```ts
+const txn = new Transaction();
+txn.callFunction({
+  address: counterAddress,
+  module: "quick_start_counter",
+  function: "mint",
+  args: [],
+});
+await signAndExecuteTransaction({ transaction: txn });
+```
+
+- 修改 fetch 操作,传递当前地址,同时添加 enable 参数
+
+```ts
+const { data, refetch } = useRoochClientQuery(
+  "executeViewFunction",
+  {
+    target: `${counterAddress}::quick_start_counter::value`,
+    args: [
+      currentAddress != null ? Args.address(currentAddress) : Args.address(""),
+    ],
+  },
+  {
+    enabled: currentAddress != null,
+  }
+);
+```
+
+其他操作，沿用原有的代码即可。
+
+- 项目已经部署在 vercel 上 ：[https://my-first-rooch-dapp.vercel.app/](https://my-first-rooch-dapp.vercel.app/)
