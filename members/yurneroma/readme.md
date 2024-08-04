@@ -2,15 +2,14 @@
 
 ### 个人介绍
 
-* Github ID：[jolestar](https://github.com/yurneroma)
+* Github ID：[yurneroma](https://github.com/yurneroma)
 
 * 微信号：Zoro-Ma
 
 * 邮箱：mabinzq007@gmail.com
 
 * BTC 地址：（用于发放训练营的学习奖励！）
-
-**删掉这行，开始在这里写一些个人介绍～**
+AI 工程师，从事AGI 平台的开发。 目前对区块链感兴趣，正在学习区块链相关技术。
 
 ### 学习日志
 
