@@ -332,3 +332,54 @@ Publish modules to address: rooch15xqe7ku3l4gaz5rhkyjhgfzdf9m4l05q9xl3svfvy3q0te
 ## Week 3
 ### 任务：构思一个 Bitcoin 生态的应用或者游戏，可以利用 Rooch 提供的特性，写成文章或者 Github Issue
 [Bitcoin Block Derby](./task3/block_derby.md)
+
+## Week 4
+### 任务：列举出至少三个Rooch Move和 SUI/APTOS Move 的区别
+[Rooch Move Difference With Sui/Aptos](./task4/rooch_diff.md)
+
+## Week5
+### 任务：使用pnpm 创建一个 Counter 工程
+
+1. 先通过`rooch-create` CLI 工具安装rooch的脚手架，脚手架默认安装`Counter`的模板，按照步骤运行起来即可，需要安装nodejs
+```shell
+pnpm create @roochnetwork/create-rooch@latest
+
+pnpm i
+
+pnpm dev
+```
+
+2. 部署一下rooch examples里的Counter合约，拿到部署的地址，其实就是自己的账户地址
+```shell
+rooch move publish --named-addresses rooch_examples=default
+```
+
+3. sign签名获取到session-key，运行Counter应用
+
+这里有个坑 确保应用是运行在devnet 不然会一直提示你没有部署合约
+
+修改devnet可以修改这里的代码：应该是app默认会走testnet
+```ts
+const { networkConfig, useNetworkVariable, useNetworkVariables } =
+  createNetworkConfig({
+    devnet: {
+      url: getRoochNodeUrl("devnet"),
+      variables: {
+        counterPackageId: DEVNET_COUNTER_PACKAGE_ID,
+      },
+    },
+    testnet: {
+      url: getRoochNodeUrl("testnet"),  // 把这里的testnet修改为devnet url: getRoochNodeUrl("devnet"), 
+      variables: {
+        counterPackageId: DEVNET_COUNTER_PACKAGE_ID,
+      },
+    },
+    localnet: {
+      url: getRoochNodeUrl("localnet"),
+      variables: {
+        counterPackageId: MAINNET_COUNTER_PACKAGE_ID,
+      },
+    },
+  })
+```
+
