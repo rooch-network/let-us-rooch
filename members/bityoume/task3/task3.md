@@ -167,15 +167,24 @@ Updated modules:
 $ rooch rpc request --method btc_queryUTXOs --params '[{"owner":"0xe6f9bb271ccbb4969b93622e3803e807c880b4cb06290442be3e05dec8b3c17d"}, null, "1", true]'
 ```
 
+### 执行初始化
+
+```bash
+$ rooch move run --function default::holder_coin::init
+```
+
 ### 质押UTXO
 
 ```bash
 export UTXO_ID=0x826a5e56581ba5ab84c39976f27cf3578cf524308b4ffc123922dfff507e514da7f9e8d832ae586e704a76ba8726aeaf44c37274f01779a2ac43b1662a6b1930
+
 rooch move run --function default::holder_coin::stake  --args object_id:$UTXO_ID 
 ```
 
 ### 获取奖励
 
 ```bash
-$ rooch move run --function default::holder_coin::claim --args object_id:$HOLDER_ID --args object_id:$UTXO_ID | jq ".execution_info
+export HOLDER_ID=0xe6f9bb271ccbb4969b93622e3803e807c880b4cb06290442be3e05dec8b3c17d
+
+rooch move run --function default::holder_coin::claim --args object_id:$HOLDER_ID --args object_id:$UTXO_ID | jq ".execution_info"
 ```
