@@ -1,0 +1,17 @@
+[package]
+name = "counter"
+version = "0.0.1"
+
+[dependencies]
+MoveStdlib = { git = "https://github.com/rooch-network/rooch.git", subdir = "frameworks/move-stdlib", rev = "main" }
+MoveosStdlib = { git = "https://github.com/rooch-network/rooch.git", subdir = "frameworks/moveos-stdlib", rev = "main" }
+RoochFramework = { git = "https://github.com/rooch-network/rooch.git", subdir = "frameworks/rooch-framework", rev = "main" }
+
+[addresses]
+counter = "0xa1819f5b91fd51d15077b12574244d49775fbe8029bf18312c2440f5e73f0e70"
+std = "0x1"
+moveos_std = "0x2"
+rooch_framework = "0x3"
+
+[dev-addresses]
+rooch_examples = "0x42"
