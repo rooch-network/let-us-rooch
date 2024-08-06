@@ -40,3 +40,8 @@ Remember to change your module name in the Move.toml file based on the new modul
 ### 任务：构思一个 Bitcoin 生态的应用或者游戏，可以利用 Rooch 提供的特性，写成文章或者 Github Issue
 [Safeswap构思](./task3/safeswap.md)
 关于SessionKey的一些分析：[Week 3 Summary](./summary.md)
+
+## Week 4
+### 列举出至少三个Rooch Move和 SUI/APTOS Move 的区别
+- Rooch Object Model 和 Sui&Aptos 几个move生态的object model分析和对比:
+    - [Week 2 Summary](./summary.md)
