@@ -1,0 +1,1 @@
+一个在 mint 时需要消耗自定义 Coin (SnowCoin) 的 NFT 合约
