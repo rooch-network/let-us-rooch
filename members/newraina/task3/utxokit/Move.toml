@@ -1,0 +1,16 @@
+[package]
+name = "utxokit"
+version = "0.0.2"
+
+[dependencies]
+MoveStdlib = { git = "https://github.com/rooch-network/rooch.git", subdir = "frameworks/move-stdlib", rev = "main" }
+MoveosStdlib = { git = "https://github.com/rooch-network/rooch.git", subdir = "frameworks/moveos-stdlib", rev = "main" }
+RoochFramework = { git = "https://github.com/rooch-network/rooch.git", subdir = "frameworks/rooch-framework", rev = "main" }
+BitcoinMove = { git = "https://github.com/rooch-network/rooch.git", subdir = "frameworks/bitcoin-move", rev = "main" }
+
+[addresses]
+utxokit = "0x0c5c469554095a160f9696bdd6a598971656c54a020088807f6626260455d4db"
+std = "0x1"
+moveos_std = "0x2"
+rooch_framework = "0x3"
+bitcoin_move =  "0x4"

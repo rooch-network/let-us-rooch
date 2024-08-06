@@ -328,3 +328,7 @@ Publish modules to address: rooch15xqe7ku3l4gaz5rhkyjhgfzdf9m4l05q9xl3svfvy3q0te
   }
 }
 ```
+
+## Week 3
+### 任务：构思一个 Bitcoin 生态的应用或者游戏，可以利用 Rooch 提供的特性，写成文章或者 Github Issue
+[Bitcoin Block Derby](./task3/block_derby.md)
