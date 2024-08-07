@@ -38,26 +38,31 @@ module nft::collection {
 
     fun init() {
         let collection_display_obj = display::display<Collection>();
-        display::set_value(collection_display_obj, string::utf8(b"name"), string::utf8(b"{name}"));
-        display::set_value(collection_display_obj, string::utf8(b"description"), string::utf8(b"{description}"));
-        display::set_value(collection_display_obj, string::utf8(b"creator"), string::utf8(b"{creator}"));
-        display::set_value(collection_display_obj, string::utf8(b"supply"), string::utf8(b"{supply}"));
+        display::set_value(
+            collection_display_obj, string::utf8(b"name"), string::utf8(b"{name}")
+        );
+        display::set_value(
+            collection_display_obj,
+            string::utf8(b"description"),
+            string::utf8(b"{description}"),
+        );
+        display::set_value(
+            collection_display_obj, string::utf8(b"creator"), string::utf8(b"{creator}")
+        );
+        display::set_value(
+            collection_display_obj, string::utf8(b"supply"), string::utf8(b"{supply}")
+        );
     }
 
     public fun create_collection(): ObjectID {
         let collection = Collection {
             name: string::utf8(COLLECTION_NAME),
             creator: tx_context::sender(),
-            supply: Supply {
-                current: 0,
-                maximum: option::some(COLLECTION_MAX_SUPPLY),
-            },
+            supply: Supply { current: 0, maximum: option::some(COLLECTION_MAX_SUPPLY), },
             description: string::utf8(COLLECTION_DESCRIPTION),
         };
 
-        let collection_obj = object::new(
-            collection
-        );
+        let collection_obj = object::new(collection);
         let collection_id = object::id(&collection_obj);
         event::emit(
             CreateCollectionEvent {
@@ -66,22 +71,25 @@ module nft::collection {
                 creator: tx_context::sender(),
                 maximum: option::some(COLLECTION_MAX_SUPPLY),
                 description: string::utf8(COLLECTION_DESCRIPTION),
-            }
+            },
         );
         object::to_shared(collection_obj);
         collection_id
     }
 
+    public entry fun create_collection_entry() {
+        create_collection();
+    }
 
     public(friend) fun increment_supply(collection: &mut Collection): Option<u64> {
         collection.supply.current = collection.supply.current + 1;
         if (option::is_some(&collection.supply.maximum)) {
             assert!(
                 collection.supply.current <= *option::borrow(&collection.supply.maximum),
-                ErrorCollectionMaximumSupply
+                ErrorCollectionMaximumSupply,
             );
             option::some(collection.supply.current)
-        }else {
+        } else {
             option::none<u64>()
         }
     }
@@ -90,7 +98,7 @@ module nft::collection {
         collection.supply.current = collection.supply.current - 1;
         if (option::is_some(&collection.supply.maximum)) {
             option::some(collection.supply.current)
-        }else {
+        } else {
             option::none<u64>()
         }
     }
