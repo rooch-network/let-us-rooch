@@ -7,7 +7,7 @@
 | 3   | K-tang-mkv        | Gant-fin             | **60** | 50     |        |        |        |        |      |
 | 4   | AricRedemption    | 復*徝                | 50     | 50     | 50     |        |        |        |      |
 | 5   | visabc            | 自由的雨             | 50     | 50     | 50     |        |        |        |      |
-| 6   | gunksd            | Awan                 | **60** | 50     | **60** | **60** |      **60**   |        |      |
+| 6   | gunksd            | Awan                 | **60** | 50     | **60** | **60** | **60** |        |      |
 | 7   | lybenson          | Syen                 | **60** | 50     | 50     |        |        |        |      |
 | 8   | birchwork         | 0xbirch              | 50     |        |        |        |        |        |      |
 | 9   | qShirley          | Shirley              | 50     | **60** | **60** | **60** | **60** |        |      |
@@ -33,8 +33,7 @@
 | 29  | zzf222            | 昵称过于强大无法显示 | 50     |        |        |        |        |        |      |
 | 30  | shaflow01         |                      |        | 50     | 50     |        |        |        |      |
 | 31  | Sifotd            | 门前雪               |        |        | 50     |        |        |        |      |
-
-78, 88, 92 ，99，100,102,105
+| 32  | yurneroma         |                      | 50     |        |        |        |        |        |      |
 
 ## 每周备注
 
@@ -78,8 +77,8 @@
   - [homework 7-30 #109](https://github.com/rooch-network/let-us-rooch/pull/109)
   - [Homework4 #111](https://github.com/rooch-network/let-us-rooch/pull/111)
   - [task4 & task5 #116](https://github.com/rooch-network/let-us-rooch/pull/116)
-- 前三名优秀作业：<++>、<++>、<++>
-  - [<++>](<++>)
+- 前三名优秀作业：newraina、<++>、<++>
+  - [task4: newraina #127](https://github.com/rooch-network/let-us-rooch/pull/127)
   - [<++>](<++>)
   - [<++>](<++>)
 
