@@ -1,0 +1,14 @@
+[package]
+name = "mintnft"
+version = "0.0.1"
+
+[dependencies]
+MoveStdlib = { git = "https://github.com/rooch-network/rooch.git", subdir = "frameworks/move-stdlib", rev = "main" }
+MoveosStdlib = { git = "https://github.com/rooch-network/rooch.git", subdir = "frameworks/moveos-stdlib", rev = "main" }
+RoochFramework = { git = "https://github.com/rooch-network/rooch.git", subdir = "frameworks/rooch-framework", rev = "main" }
+
+[addresses]
+mintnft = "0xeb9fb7d66ec5f16fbd8c3578216e8a25800beaed54e0ab0fe8a3b3139d026544"
+std = "0x1"
+moveos_std = "0x2"
+rooch_framework = "0x3"
