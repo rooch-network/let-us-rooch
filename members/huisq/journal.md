@@ -49,3 +49,7 @@ Remember to change your module name in the Move.toml file based on the new modul
 ## Week 5
 ### 使用pnpm 创建一个 Counter 工程
 [img5](./img/task5.png)
+
+## Rooch 线上mini黑客松
+队友：@AricRedemption
+[多链钱包](https://github.com/SurgeSafeTeam/surge-wallet)
