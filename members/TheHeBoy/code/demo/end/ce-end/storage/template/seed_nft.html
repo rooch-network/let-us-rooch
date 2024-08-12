@@ -1,0 +1,41 @@
+<html lang="en">
+<head>
+    <meta ticker="DanceOfStructures" opt="mint" hashseed="{{.HSeed}}">
+    <style>
+        body {
+            margin: 0;
+            background: #000;
+            overflow: hidden;
+        }
+
+        canvas {
+            bottom: 0;
+            height: 100vw;
+            left: 0;
+            margin: auto;
+            max-height: 100vh;
+            max-width: 100vh;
+            position: absolute;
+            right: 0;
+            top: 0;
+            width: 100vw;
+        }
+    </style>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.6.0/p5.min.js"></script>
+    <script type="text/javascript"
+            src="https://static-testnet.unisat.io/content/3ff542062d6c2d774dccc17bfffd07bb079ad27366e8ea6f5d5674e954902acei0"></script>
+</head>
+<body>
+<canvas id="canvas"></canvas>
+<script type="text/javascript">
+    function setup() {
+        createCanvas(1000, 1000);
+        background('#f2ecde');
+        initData('{{.HSeed}}');
+    }
+    function draw() {
+        renderMain();
+    }
+</script>
+</body>
+</html>

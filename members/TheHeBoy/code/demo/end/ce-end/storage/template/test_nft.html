@@ -1,0 +1,53 @@
+<html lang="en">
+<head>
+    <meta ticker="DanceOfStructures" opt="mint" hashseed="{{.HSeed}}">
+    <style>
+        body {
+            margin: 0;
+            background: #000;
+            overflow: hidden;
+        }
+
+        canvas {
+            bottom: 0;
+            height: 100vw;
+            left: 0;
+            margin: auto;
+            max-height: 100vh;
+            max-width: 100vh;
+            position: absolute;
+            right: 0;
+            top: 0;
+            width: 100vw;
+        }
+    </style>
+    <script type="module">
+        import *as fcompress from '/content/ad33b21ece6ae27004bfa2e23755c363366fa07ad2cceb914833767ee48c9523i0';
+
+        async function getBaseFile() {
+            const baser = await fetch('/content/0f967c475f2deb2b17caaba7bc1c7b226d10160b1ec2fdb728442888446f3debi0');
+            const bases = await baser.text();
+            const base = fcompress.strFromU8(fcompress.gunzipSync(new Uint8Array(Array.from(atob(bases)).map((char) => char.charCodeAt(0)))));
+            eval(base);
+        }
+
+        getBaseFile();
+    </script>
+    <script type="text/javascript"
+            src="/content/3ff542062d6c2d774dccc17bfffd07bb079ad27366e8ea6f5d5674e954902acei0"></script>
+</head>
+<body>
+<canvas id="canvas"></canvas>
+<script type="text/javascript">
+    function setup() {
+        createCanvas(1000, 1000);
+        background('#f2ecde');
+        initData('{{.HSeed}}');
+    }
+
+    function draw() {
+        renderMain();
+    }
+</script>
+</body>
+</html>

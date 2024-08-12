@@ -1,0 +1,18 @@
+[package]
+name = "colored_egg"
+version = "0.0.1"
+
+[dependencies]
+MoveStdlib = { git = "https://github.com/rooch-network/rooch.git", subdir = "frameworks/move-stdlib", rev = "main" }
+MoveosStdlib = { git = "https://github.com/rooch-network/rooch.git", subdir = "frameworks/moveos-stdlib", rev = "main" }
+RoochFramework = { git = "https://github.com/rooch-network/rooch.git", subdir = "frameworks/rooch-framework", rev = "main" }
+BitcoinMove = { git = "https://github.com/rooch-network/rooch.git", subdir = "frameworks/bitcoin-move", rev = "main" }
+
+[addresses]
+colored_egg =  "_"
+moveos_std =  "0x2"
+rooch_framework =  "0x3"
+bitcoin_move =  "0x4"
+
+[dev-addresses]
+colored_egg = "0x42"
