@@ -60,3 +60,10 @@ rooch move run --function default::nft::mint_entry --args object:0xf8bb40a395699
 **task5** 
 部署counter  
 ![img](./task5/task5.jpg)  
+
+**demo**
+random  
+```
+rooch move run --function default::random::get_random --args object:0x2::timestamp::Timestamp --args u64:100 --sender-account default  
+```  
+本来想写发红包的应用，时间有限没写好T_T
