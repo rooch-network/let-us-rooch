@@ -24,3 +24,7 @@ BTC layer2 生态开发者、区块链爱好者
 2. 学习rooch常用命令和部署合约流程
 
 3. 学习基于rooch的move智能合约和bitcoin数据的进行交互
+
+4. 调研rooch和sui、aptos的区别
+
+5. 运行rooch dapp
