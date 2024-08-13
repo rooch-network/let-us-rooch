@@ -20,8 +20,4 @@ web dev
 
 ### 学习成果
 
-1.
-
-2.
-
-3.
+1. bonding curve project
