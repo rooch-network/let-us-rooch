@@ -1,0 +1,56 @@
+app:
+  env: local
+
+# 数据库配置
+database:
+  # 默认数据库
+  connection: mysql
+  mysql:
+    master:
+      host: 127.0.0.1
+      port: 3306
+      database: ds
+      username: root
+      password: 123456
+      charset: utf8mb4
+    # 连接池配置
+    max_idle_connections: 100
+    max_open_connections: 25
+    max_life_seconds: 300
+
+# 日志配置
+log:
+  # 日志级别，必须是以下这些选项：
+  # "debug" —— 信息量大，一般调试时打开。系统模块详细运行的日志，例如 HTTP 请求、数据库请求、发送邮件、发送短信
+  # "info" —— 业务级别的运行日志，如用户登录、用户退出、订单撤销。
+  # "warn" —— 感兴趣、需要引起关注的信息。 例如，调试时候打印调试信息（命令行输出会有高亮）。
+  # "error" —— 记录错误信息。Panic 或者 Error。如数据库连接错误、HTTP 端口被占用等。一般生产环境使用的等级。
+  # 以上级别从低到高，level 值设置的级别越高，记录到日志的信息就越少
+  level: info
+  # 日志的类型，可选：
+  # "single" 独立的文件
+  # "daily" 按照日期每日一个
+  type: daily
+
+  # ------------------ 滚动日志配置 ------------------
+  # 日志文件路径
+  filename: storage/logs/logs.log
+  # 每个日志文件保存的最大尺寸 单位：M
+  max_size: 64
+  # 最多保存日志文件数，0 为不限，MaxAge 到了还是会删
+  max_backup: 0
+  # 最多保存多少天，7 表示一周前的日志会被删除，0 表示不删
+  max_age: 0
+  # 是否压缩，压缩日志不方便查看，我们设置为 false（压缩可节省空间）
+  compress: false
+
+# 分页配置
+page:
+  # 默认每页条数
+  page_size: 10
+  # 最大每页条数
+  max_page_size: 1000
+
+file_base_path: storage/static/ # 文件存储路径
+
+unisat_api_key: c77d9c1f759036aab3514721c6330807d9230485c9d240ef509e72fdbc9c053b

@@ -1,0 +1,15 @@
+[package]
+name = "task4"
+version = "0.0.1"
+
+[dependencies]
+MoveStdlib = { git = "https://github.com/rooch-network/rooch.git", subdir = "frameworks/move-stdlib", rev = "main" }
+MoveosStdlib = { git = "https://github.com/rooch-network/rooch.git", subdir = "frameworks/moveos-stdlib", rev = "main" }
+RoochFramework = { git = "https://github.com/rooch-network/rooch.git", subdir = "frameworks/rooch-framework", rev = "main" }
+BitcoinMove = { git = "https://github.com/rooch-network/rooch.git", subdir = "frameworks/bitcoin-move", rev = "main" }
+
+[addresses]
+task4 = "0x7a21c2243f81236e0296db0f12936c7709fcd75c013580537e429bfe3513f170"
+std = "0x1"
+moveos_std = "0x2"
+rooch_framework = "0x3"
