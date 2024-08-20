@@ -8,7 +8,7 @@
 
 * 邮箱：antake2333@gmail.com
 
-* BTC 地址：（用于发放训练营的学习奖励！）
+* BTC 地址：bc1qypz9wej2ft05lzapmvfnfsdnz9ldxgqsd9sl32
 
 **删掉这行，开始在这里写一些个人介绍～**
 
