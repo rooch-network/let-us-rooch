@@ -146,11 +146,11 @@ PPT: https://docs.google.com/presentation/d/1e7QfAamt0XHwvQa5oOEXgreE5JVdgOnx6Rm
 
 1. 项目描述
 
-<++>
+对于艺术家，设计师可以在rooch链上发布自己的设计作品。 对有BTC的用户，在mint艺术家的作品，类似盲盒。记录写到链上。 进而形成资产共识，产生价值。
 
 2. 项目地址
 
-<++>
+https://github.com/rooch-network/let-us-rooch/tree/main/members/heisenbergx626/demo
 
 3. 团队成员
 
