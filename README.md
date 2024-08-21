@@ -88,6 +88,9 @@ Rooch 开发者训练营正式开启报名，具体课程为期 6 周，第一�
 - 挑选 5 个项目进入加速器，有奖
 - 资料：[PPT](https://docs.google.com/presentation/d/1WbR1HecfkxBI_0N0jPuivYREM6GVqFgFE2SGRkAsGMg/edit?usp=sharing)
 - 视频：[腾讯会议录制](https://meeting.tencent.com/v2/cloud-record/share?id=7f392098-5daa-46d9-9f5c-699b1628ef37&from=3&record_type=2)
+- Projects：
+  - [English](https://github.com/rooch-network/let-us-rooch/blob/main/hackathon.md)
+  - [中文](https://github.com/rooch-network/let-us-rooch/blob/main/hackathon-zh.md)
 
 > 注：黑客松 Demo 项目的提交，可以自己单独创建一个仓库，并将自己的项目地址放到作业目录的 `summary.md` 文件中。
 
@@ -106,12 +109,6 @@ Rooch 开发者训练营正式开启报名，具体课程为期 6 周，第一�
 ### 计分公示
 
 每周统计一次得分，公示在 [Scoring](./scoring.md) 中。
-
-## 结业仪式
-
-- 时间：2024年8月10日
-
-线上公布分值，颁发奖品
 
 ## 如何参与
 
