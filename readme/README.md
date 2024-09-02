@@ -12,11 +12,11 @@
 
 </div>
 
-[![](./imgs/lets-rooch-zh.png)](https://rooch.network/)
+[![](../imgs/lets-rooch-zh.png)](https://rooch.network/)
 
 ## README.md同时有以下语言的版本
 - zh_CN [简体中文](README.md)
-- en [English](./readme/README_en.md)
+- en [English](README_en.md)
 
 ## 训练营简介
 
@@ -33,7 +33,7 @@ Rooch 开发者训练营正式开启报名，具体课程为期 6 周，第一�
 ### 课程形式
 
 - 腾讯会议 在线直播
-- 录播视频，剪辑上传视频平台后，链接放 [Videos](./videos.md) 页面
+- 录播视频，剪辑上传视频平台后，链接放 [Videos](../videos.md) 页面
 
 ### 导师简介
 
@@ -91,10 +91,6 @@ Rooch 开发者训练营正式开启报名，具体课程为期 6 周，第一�
 - 时间：10 天左右
 - 挑选 5 个项目进入加速器，有奖
 - 资料：[PPT](https://docs.google.com/presentation/d/1WbR1HecfkxBI_0N0jPuivYREM6GVqFgFE2SGRkAsGMg/edit?usp=sharing)
-- 视频：[腾讯会议录制](https://meeting.tencent.com/v2/cloud-record/share?id=7f392098-5daa-46d9-9f5c-699b1628ef37&from=3&record_type=2)
-- Projects：
-  - [English](https://github.com/rooch-network/let-us-rooch/blob/main/hackathon.md)
-  - [中文](https://github.com/rooch-network/let-us-rooch/blob/main/hackathon-zh.md)
 
 > 注：黑客松 Demo 项目的提交，可以自己单独创建一个仓库，并将自己的项目地址放到作业目录的 `summary.md` 文件中。
 
@@ -112,10 +108,16 @@ Rooch 开发者训练营正式开启报名，具体课程为期 6 周，第一�
 
 ### 计分公示
 
-每周统计一次得分，公示在 [Scoring](./scoring.md) 中。
+每周统计一次得分，公示在 [Scoring](../scoring.md) 中。
+
+## 结业仪式
+
+- 时间：2024年8月10日
+
+线上公布分值，颁发奖品
 
 ## 如何参与
 
 1. 填写 Rooch 开发者训练营报名表单，加入 Rooch 星航计划微信群组，即为报名成功。
-2. Fork 本仓库，**复制** [members/githubid](./members/githubid) 目录名为 `members/$your_github_id`，根据自己的信息编辑其中的 `readme.md` 内容，并提交 **Pull Request** 给本仓库，持续跟踪学习进度。（例如Joe Chen `fork` 一份，并重命名为 `geometryolife` 这个文件目录）
+2. Fork 本仓库，**复制** [members/githubid](../members/githubid) 目录名为 `members/$your_github_id`，根据自己的信息编辑其中的 `readme.md` 内容，并提交 **Pull Request** 给本仓库，持续跟踪学习进度。（例如Joe Chen `fork` 一份，并重命名为 `geometryolife` 这个文件目录）
 3. 学习过程中可以持续更新该文件的学习日志，以及学习成果。如果学习过程中问题，可以在群里讨论。如果需要一些练习任务，但又找不到合适的，可以咨询导师。
