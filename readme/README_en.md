@@ -12,7 +12,7 @@
 
 </div>
 
-[![](./imgs/lets-rooch-zh.png)](https://rooch.network/)
+[![](../imgs/lets-rooch-zh.png)](https://rooch.network/)
 
 ## README.md language version
 - zh_CN [简体中文](README.md)
