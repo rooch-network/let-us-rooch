@@ -14,6 +14,10 @@
 
 [![](./imgs/lets-rooch-zh.png)](https://rooch.network/)
 
+## README.md同时有以下语言的版本
+- zh_CN [简体中文](README.md)
+- en [English](README_en.md)
+
 ## 训练营简介
 
 在当前快速发展的区块链行业中，Bitcoin 作为第一代加密货币，依然保持着重要的地位和影响力。作为首个成功实现去中心化数字货币的区块链，Bitcoin 为整个行业奠定了基石。然而，随着时间的推移，Bitcoin 网络在处理性能、扩展性等方面面临着一些挑战，这就为 Rooch 的出现带来了机遇。
@@ -29,7 +33,7 @@ Rooch 开发者训练营正式开启报名，具体课程为期 6 周，第一�
 ### 课程形式
 
 - 腾讯会议 在线直播
-- 录播视频，剪辑上传视频平台后，链接放 [Videos](./videos.md) 页面
+- 录播视频，剪辑上传视频平台后，链接放 [Videos](../videos.md) 页面
 
 ### 导师简介
 
@@ -104,7 +108,7 @@ Rooch 开发者训练营正式开启报名，具体课程为期 6 周，第一�
 
 ### 计分公示
 
-每周统计一次得分，公示在 [Scoring](./scoring.md) 中。
+每周统计一次得分，公示在 [Scoring](../scoring.md) 中。
 
 ## 结业仪式
 
@@ -115,5 +119,5 @@ Rooch 开发者训练营正式开启报名，具体课程为期 6 周，第一�
 ## 如何参与
 
 1. 填写 Rooch 开发者训练营报名表单，加入 Rooch 星航计划微信群组，即为报名成功。
-2. Fork 本仓库，**复制** [members/githubid](./members/githubid) 目录名为 `members/$your_github_id`，根据自己的信息编辑其中的 `readme.md` 内容，并提交 **Pull Request** 给本仓库，持续跟踪学习进度。（例如Joe Chen `fork` 一份，并重命名为 `geometryolife` 这个文件目录）
+2. Fork 本仓库，**复制** [members/githubid](../members/githubid) 目录名为 `members/$your_github_id`，根据自己的信息编辑其中的 `readme.md` 内容，并提交 **Pull Request** 给本仓库，持续跟踪学习进度。（例如Joe Chen `fork` 一份，并重命名为 `geometryolife` 这个文件目录）
 3. 学习过程中可以持续更新该文件的学习日志，以及学习成果。如果学习过程中问题，可以在群里讨论。如果需要一些练习任务，但又找不到合适的，可以咨询导师。
