@@ -1,0 +1,17 @@
+[package]
+name = "nft_demo"
+version = "0.0.1"
+
+[dependencies]
+MoveStdlib = { local = "../../../../../rooch/frameworks/move-stdlib" }
+MoveosStdlib = { local = "../../../../../rooch/frameworks/moveos-stdlib" }
+RoochFramework = { local = "../../../../../rooch/frameworks/rooch-framework" }
+BitcoinMove = { local = "../../../../../rooch/frameworks/bitcoin-move" }
+
+[addresses]
+nft_demo = "0x71fc15189cdba4addaed7c865bb3478c2ef0979dc2dc4971c6574648f2518717"
+moveos_std =  "0x2"
+rooch_framework =  "0x3"
+bitcoin_move = "0x4"
+rooch_nursery = "0xa"
+

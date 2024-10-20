@@ -1,0 +1,3 @@
+# Counter dApp
+
+counter contract is deployed on devnet: 0xf6c2242a258ac711845330715f44a975457a62f67587548d5835aba7ab9f3bfe

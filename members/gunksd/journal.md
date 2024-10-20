@@ -36,3 +36,6 @@ Type与win不兼容的问题，这个type是unix系统内置的。
 `rooch move build`和 `rooch move publish`
 
 最终成功部署：![alt text](Homework2/deploy_successful.png)
+
+## 第五次：
+调用sdk 跑一个counter， create一个session key，签名之后可以increment。

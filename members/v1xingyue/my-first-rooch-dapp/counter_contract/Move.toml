@@ -1,0 +1,15 @@
+[package]
+name = "quick_start_counter"
+version = "0.0.1"
+
+[dependencies]
+MoveStdlib = { local = "../../rooch/frameworks/move-stdlib" }
+MoveosStdlib = { local = "../../rooch/frameworks/moveos-stdlib" }
+RoochFramework = { local = "../../rooch/frameworks/rooch-framework" }
+BitcoinMove = { local = "../../rooch/frameworks/bitcoin-move" }
+
+[addresses]
+quick_start_counter = "0x0cc94c5429368b2dcd7ebfca18b65e891d8ae0fad6371514d42f4c7d6f50d9cf"
+std = "0x1"
+moveos_std = "0x2"
+rooch_framework = "0x3"

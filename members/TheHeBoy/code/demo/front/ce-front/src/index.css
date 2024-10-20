@@ -1,0 +1,15 @@
+/* Copyright (c) RoochNetwork */
+/* SPDX-License-Identifier: Apache-2.0 */
+/* Author: Jason Jo */
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+body {
+  background-color: #f2be45;
+  background-image: url("https://www.transparenttextures.com/patterns/asfalt-dark.png");
+  /* This is mostly intended for prototyping; please download the pattern and re-host for production environments. Thank you! */
+  color:#52616d;
+}
