@@ -8,7 +8,7 @@
 
 * 邮箱：shaflow01@gmail.com
 
-* BTC 地址：bcrt1plka37ry64xdngunzeqdmyghrurzq4tds6lqax954l86g2chn3tgq7kptuq
+* BTC 地址：bc1qk3epd3zl9a5yjx8qd5xq85xces74s4z9y3gr5y
 
 合约审计，星航计划三期学员，熟悉solidity，Sui
 
